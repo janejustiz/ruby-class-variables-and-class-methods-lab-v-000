@@ -31,6 +31,7 @@ class Song
   def self.genre_count
     if @genre_hash.keys.any?{|x| x == @genre} == true
       @genre_hash[@genre] = @@genres.count(@genre)
+    end
   end
 
   def self.artist_count
