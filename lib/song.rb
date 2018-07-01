@@ -4,8 +4,6 @@ class Song
   @@count = 0
   @@artists = []
   @@genres = []
-  @genre_hash = {}
-  @artist_hash = {}
 
   def initialize(name, artist, genre)
     @name = name
@@ -27,15 +25,17 @@ class Song
   def self.genres
     @@genres
   end
-
+  
   def self.genre_count
-    if @genre_hash.keys.any?{|x| x == @genre} == true
-      @genre_hash[@genre] = @@genres.count(@genre)
+    genre_hash = {}
+    @@genres.each do |genre|
+      if genre_hash.keys.any?{|genre| x == @genre} == false
+        genre_hash[genre] == @@genres.count(genre)
     end
   end
-
+  
   def self.artist_count
-
+    count = {}
   end
-
+  
 end
