@@ -20,8 +20,8 @@ class Song
 
   def self.artists
     artist_array = []
-    artist_array.each do |added|
-      if @@artists.any? {|person| person == added}== false
+    @@artists.each do |person|
+      if artist_array.any? {|added| added == person} == false
         artist_array << person
       end
     end
