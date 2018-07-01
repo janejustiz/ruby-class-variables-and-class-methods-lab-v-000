@@ -48,7 +48,9 @@ class Song
 
   def self.artist_count
     artist_hash = {}
-
+    @artist_array.each do |ind|
+      artist_hash[ind] = @@artists.count(ind)
+    end
     artist_hash
   end
 
