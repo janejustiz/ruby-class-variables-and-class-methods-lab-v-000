@@ -19,13 +19,13 @@ class Song
   end
 
   def self.artists
-    artist_array = []
+    @artist_array = []
     @@artists.each do |person|
-      if artist_array.any? {|added| added == person} == false
-        artist_array << person
+      if @artist_array.any? {|added| added == person} == false
+        @artist_array << person
       end
     end
-    artist_array
+    @artist_array
   end
 
   def self.genres
