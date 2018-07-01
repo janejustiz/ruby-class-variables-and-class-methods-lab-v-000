@@ -31,7 +31,7 @@ class Song
     @@genres.each do |genre|
       if genre_hash.keys.any?{|x| x == genre}
       else
-        genre_hash[genre] = @@genre.count(genre)
+        genre_hash[genre] = @@genres.count(genre)
       end
     end
   end
