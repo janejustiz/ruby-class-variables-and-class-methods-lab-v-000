@@ -29,21 +29,27 @@ class Song
   end
 
   def self.genres
-    genre_array = []
+    @genre_array = []
     @@genres.each do |types|
-      if genre_array.any? {|added| added == types} == false
-        genre_array << types
+      if @genre_array.any? {|added| added == types} == false
+        @genre_array << types
       end
     end
-    genre_array
+    @genre_array
   end
 
   def self.genre_count
-
+    genre_hash = {}
+    @genre_array.each do |ind|
+      genre_hash[ind] = @@genres.count(ind)
+    end
+    genre_hash
   end
 
   def self.artist_count
+    artist_hash = {}
 
+    artist_hash
   end
 
 end
