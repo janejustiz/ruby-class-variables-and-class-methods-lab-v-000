@@ -29,8 +29,9 @@ class Song
   def self.genre_count
     genre_hash = {}
     @@genres.each do |genre|
-      if genre_hash.keys.any?{|genre| genre == @genre} == false
-        genre_hash[genre] = @@genres.count(genre)
+      if genre_hash.keys.any?{|x| x == genre}
+      else
+        genre_hash[genre] = @@genre.count(genre)
       end
     end
   end
